@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block body %}
+        
+
+      <div class="container my-3">
+        <h2>Employee Form</h2>
+        <form class="row g-3" method="POST" action="/update/{{emp.id}}">
+            <div class="col-6">
+              <label for="firstname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstname" value="{{emp.first_name}}" name="firstname">
+            </div>
+            <div class="col-6">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastname" name="lastname" value="{{emp.last_name}}">
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address" value="{{emp.address}}">
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" value="{{emp.email}}">
+            </div>
+            <div class="col-md-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" name="city" value="{{emp.city}}">
+            </div>
+            <div class="col-md-2">
+              <label for="contact" class="form-label">Contact</label>
+              <input type="text" class="form-control" id="contact" name="contact" value="{{emp.contact}}">
+            </div>
+            <div class="col-md-6">
+              <label for="company" class="form-label">Company</label>
+              <input type="text" class="form-control" id="company" name="company" value="{{emp.company}}">
+            </div>
+            <div class="col-md-6">
+              <label for="design" class="form-label">Designation</label>
+              <input type="text" class="form-control" id="design" name="design" value="{{emp.designation}}">
+            </div>           
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary">Update</button>
+            </div>
+          </form>
+      </div>
+        
+      
+{% endblock body %}
